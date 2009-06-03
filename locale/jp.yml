@@ -1,0 +1,181 @@
+"jp":
+  activerecord:
+    errors:
+      # The values :model, :attribute and :value are always available for interpolation
+      # The value :count is available when applicable. Can be used for pluralization.
+      messages:
+        inclusion: "はリストに含まれてません"
+        exclusion: "はリストに含まれてます"
+        invalid: "は不正な値です"
+        confirmation: "は確認されませんでした"
+        accepted: "は許可されていません"
+        empty: "を入力して下さい"
+        blank: "を入力して下さい"
+        too_long: "が長すぎます ({{count}} 文字以下で入力して下さい)"
+        too_short: "が短すぎます ({{count}} 文字以上で入力してください)"
+        wrong_length: "は {{count}} 文字でなければなりません"
+        taken: "はすでに存在します"
+        not_a_number: "は数字で入力して下さい"
+        greater_than: "は {{count}} より大きくなければいけません"
+        greater_than_or_equal_to: "は {{count}} 以上でなければいけません"
+        equal_to: "は {{count}} でなければいけません"
+        less_than: "は  {{count}} より小さくなければいけません"
+        less_than_or_equal_to: "は {{count}} 以下でなければいけません"
+        odd: "must be odd"
+        even: "must be even"
+        # Append your own errors here or at the model/attributes scope.
+
+      # You can define own errors for models or model attributes.
+      # The values :model, :attribute and :value are always available for interpolation.
+      #
+      # For example,
+      #   models:
+      #     user:
+      #       blank: "This is a custom blank message for {{model}}: {{attribute}}"
+      #       attributes:
+      #         login:
+      #           blank: "This is a custom blank message for User login"
+      # Will define custom blank validation message for User model and 
+      # custom blank validation message for login attribute of User model.
+      models:
+        
+      template:
+        header:
+          one:    "1 個のエラーが発生しました"
+          other:  "{{count}} 個のエラーが発生しました"
+        # The variable :count is also available
+        body: "次の項目に問題があります:"
+
+    # Translate model names. Used in Model.human_name().
+    #models:
+      # For example,
+      #   user: "Dude"
+      # will translate User model name to "Dude"
+    
+    # Translate model attribute names. Used in Model.human_attribute_name(attribute).
+    #attributes:
+      # For example,
+      #   user:
+      #     login: "Handle"
+      # will translate User attribute "login" as "Handle"
+
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%Y年%m月%d日"
+      short: "%e %b"
+      long: "%Y年%m月%d日"
+      
+    day_names: [日曜日, 月曜日, 火曜日, 水曜日, 木曜日, 金曜日, 土曜日]
+    abbr_day_names: [日, 月, 火, 水, 木, 金, 土]
+      
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+    abbr_month_names: [~, '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+    # Used in date_select and datime_select.
+    order: [ :year, :month, :day ]
+
+  time:
+    formats:
+      default: "%Y年%m月%d日 %H:%M:%S"
+      # これはいる？
+      time: "%H:%M"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+      # これはいる？
+      only_second: "%S"
+
+      datetime:
+        formats:
+          default: "%Y年%m月%d日 %H:%M:%S"
+      
+    am: "午前"
+    pm: "午後"
+      
+# Used in array.to_sentence.
+  support:
+    array:
+      sentence_connector: "and"
+      skip_last_comma: false
+  number:
+    # Used in number_with_delimiter()
+    # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
+    format:
+      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
+      separator: "."
+      # Delimets thousands (e.g. 1,000,000 is a million) (always in groups of three)
+      delimiter: ","
+      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
+      precision: 3
+      
+    # Used in number_to_currency()
+    currency:
+      format:
+        # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
+        format: "%u%n"
+        unit: "\\"
+        # These three are to override number.format and are optional
+        separator: "."
+        delimiter: ","
+        precision: 2
+        
+    # Used in number_to_percentage()
+    percentage:
+      format:
+        # These three are to override number.format and are optional
+        # separator: 
+        delimiter: ""
+        # precision: 
+        
+    # Used in number_to_precision()
+    precision:
+      format:
+        # These three are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        # precision:
+        
+    # Used in number_to_human_size()
+    human:
+      format:
+        # These three are to override number.format and are optional
+        # separator: 
+        delimiter: ""
+        precision: 1
+
+  # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
+  datetime:
+    distance_in_words:
+      half_a_minute: "30秒"
+      less_than_x_seconds:
+        one:   "1 秒以内"
+        other: "{{count}} 秒以内"
+      x_seconds:
+        one:   "1 秒"
+        other: "{{count}} 秒"
+      less_than_x_minutes:
+        one:   "1 分以内"
+        other: "{{count}} 分以内"
+      x_minutes:
+        one:   "1 分"
+        other: "{{count}} 分"
+      about_x_hours:
+        one:   "1 時間"
+        other: "{{count}} 時間"
+      x_days:
+        one:   "1日"
+        other: "{{count}} 日"
+      about_x_months:
+        one:   "約 1 ヶ月"
+        other: "約 {{count}} ヶ月"
+      x_months:
+        one:   "1 ヶ月"
+        other: "{{count}} ヶ月"
+      about_x_years:
+        one:   "約 1 年"
+        other: "約 {{count}} 年"
+      over_x_years:
+        one:   "1 年以上"
+        other: "{{count}} 年以上"

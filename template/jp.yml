@@ -1,0 +1,17 @@
+jp:
+  activerecord:
+    # モデル名を変換します. Used in Model.human_name().
+    models:
+      # サンプル
+      #   userモデルの名前を「会員」に設定
+      #   user: "会員"
+    
+    # モデルのメンバー名を変換します. Used in Model.human_attribute_name(attribute).
+    attributes:
+      # サンプル
+      #   user:
+      #     login: "ログイン"
+      # userモデルのloginというカラムの名前を「ログイン」に設定します
+
+  form:
+    back: 戻る

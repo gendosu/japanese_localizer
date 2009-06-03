@@ -1,0 +1,17 @@
+RailsJp
+=======
+
+このプラグインは、Rails 2.2.xのメッセージを日本語化します
+ついでに、ActionView::Helper::FormBuilderのdatetime_selectなども日本語化対応にします
+datetime_selectの使用方法はExampleを参照してください
+
+RAILS_ROOT/config/locale/jp.ymlファイルを置く事で、モデル名やカラム名などを日本語化することができます
+サンプルymlファイルはプラグインフォルダのtemplateに入っています
+
+Example
+=======
+<%= f.datetime_select :date, :year_separator => '年', :month_separator => '月', :day_separator => '日', :use_month_numbers => true %>
+
+
+
+Copyright (c) 2008 [name of plugin creator], released under the MIT license
