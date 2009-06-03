@@ -1,7 +1,7 @@
-RailsJp
+japanese_localizer
 =======
 
-このプラグインは、Rails 2.2.xのメッセージを日本語化します
+このプラグインは、Rails 2.3.xのメッセージを日本語化します
 ついでに、ActionView::Helper::FormBuilderのdatetime_selectなども日本語化対応にします
 datetime_selectの使用方法はExampleを参照してください
 
