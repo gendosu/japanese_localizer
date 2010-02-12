@@ -9,6 +9,12 @@ RAILS_ROOT/config/locale/jp.ymlファイルを置く事で、モデル名やカ�
 サンプルymlファイルはプラグインフォルダのtemplateに入っています
 http://github.com/gendosu/japanese_localizer
 
+Install
+=======
+Railsプロジェクトの中で
+ruby script/plugin install git://github.com/gendosu/japanese_localizer.git
+を実行
+
 Example
 =======
 <%= f.datetime_select :date, :year_separator => '年', :month_separator => '月', :day_separator => '日', :use_month_numbers => true %>
